@@ -21,12 +21,12 @@ class BasicForm extends Component {
 
     return (
       <div>
-        <input {...getFieldProps('normal')}/>
-        <input {...getFieldProps('required', {
-          onChange(){}, // have to write original onChange here if you need
-          rules: [{required: true}],
+        <input {...getFieldProps('name', {
+          rules: [{required: true, message: '姓名必填'}],
         })}/>
-        {(errors = getFieldError('required')) ? errors.join(',') : null}
+        <div>
+          {(errors = getFieldError('name')) ? errors.join(',') : null}
+        </div>
         <button onClick={this.submit}>submit</button>
       </div>
     );
