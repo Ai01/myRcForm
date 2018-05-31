@@ -5,6 +5,6 @@
 
 ## directory struct
 
-1. ideaRecord 平时思考的记录
-2. example 对rc—form的使用例子
-3. src my_rc_form的代码
+1. src/ideaRecord 平时思考的记录
+2. src/example 对rc—form的使用例子
+3. src/myCode my_rc_form的代码
