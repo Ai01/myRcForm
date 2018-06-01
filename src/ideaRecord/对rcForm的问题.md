@@ -54,4 +54,4 @@ const meta = {
 5. rcForm的双向绑定是怎么实现的
 
 > createForm返回一个component然后setFieldsValue中使用了forceUpdate。实现了value到视图的更新。
-dom的trigger事件触发的时候改变state
+dom的trigger事件触发的时候调用setFieldsValue
