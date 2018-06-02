@@ -3,9 +3,6 @@ import hoistStatics from 'hoist-non-react-statics';
 import createFieldsStore from './createFieldStore';
 
 const createForm = WrappedComponent => {
-  // TODO:bai store需要写成一个class
-
-  // TODO:bai form里面的方法都是this.store.xxx
   // form应该是一个component
   class Form extends Component {
     constructor(props) {
