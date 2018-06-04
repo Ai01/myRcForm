@@ -30,20 +30,24 @@ class ExampleForm extends Component {
             })(<input type="text" style={{ width: 100 }} />)}
           </div>
         </div>
-        <button
-          onClick={() => {
-            setFieldValue('a', 'test');
-          }}
-        >
-          点击重置a的值为test
-        </button>
-        <button
-          onClick={() => {
-            console.log(getFieldsValue(['a', 'b']));
-          }}
-        >
-          获取value
-        </button>
+        <div>
+          <button
+            onClick={() => {
+              setFieldValue('a', 'test');
+            }}
+          >
+            点击重置a的值为test
+          </button>
+        </div>
+        <div>
+          <button
+            onClick={() => {
+              console.log(getFieldsValue(['a', 'b']));
+            }}
+          >
+            获取value(查看console)
+          </button>
+        </div>
       </div>
     );
   }

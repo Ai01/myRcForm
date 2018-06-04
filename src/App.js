@@ -4,7 +4,7 @@ import FieldDelete from './example/fieldDelete';
 import SetFieldsTest from './example/setFieldsTest';
 import MyForm from './myCode/exampleUse';
 
-const APP_SWITCH = 'setFieldsTest';
+const APP_SWITCH = 'myForm';
 
 class App extends Component {
   render() {

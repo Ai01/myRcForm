@@ -18,14 +18,14 @@ class FieldsStore {
     this.fieldsMeta = Object.assign({}, oldFieldsMeta, fieldsMeta);
   }
 
-  getField(fieldName) {
+  getFieldValue(fieldName) {
     return this.fields[fieldName];
   }
 
   getFieldsValue(fields) {
-    const res = [];
+    const res = {};
     fields.forEach(fieldName => {
-      res.push(this.getField(fieldName));
+      res[fieldName] = this.getFieldValue(fieldName);
     });
 
     console.log(res);
