@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import hoistStatics from 'hoist-non-react-statics';
+// import hoistStatics from 'hoist-non-react-statics';
 import createFieldsStore from './createFieldStore';
 
 const createForm = WrappedComponent => {
@@ -11,6 +11,10 @@ const createForm = WrappedComponent => {
       this.setFieldValue = this.setFieldValue.bind(this);
       this.getForm = this.getForm.bind(this);
       this.fieldsStore = createFieldsStore();
+    }
+
+    getFieldProps(name, usersFieldOptions = {}){
+
     }
 
     getFieldDecorator(id, options) {
@@ -67,7 +71,8 @@ const createForm = WrappedComponent => {
     }
   }
 
-  return hoistStatics(Form, WrappedComponent);
+  // return hoistStatics(Form, WrappedComponent);
+  return Form;
 };
 
 export default createForm;
