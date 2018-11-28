@@ -18,10 +18,13 @@ const createForm = WrappedComponent => {
     }
 
     getFieldDecorator(id, options) {
+      // TODO: 返回的组件需要添加update函数。来实现在chang的时候update
+
       return fieldElem => {
         return React.cloneElement(fieldElem, {
           ...this.fieldsStore.getFieldValuePropValue(id),
           onChange: e => {
+            //TODO: 应该将onChange注册到filedStore中
             this.setFieldValue(id, e.target.value);
           },
         });
@@ -33,6 +36,8 @@ const createForm = WrappedComponent => {
         [fieldName]: value,
       });
 
+      //TODO: 当field改变的时候不需要触发整个form的update
+      //TODO: 应该触发field的onChange
       this.forceUpdate();
     }
 
